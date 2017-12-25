@@ -74,3 +74,14 @@ martin:
   facebook: False
   twitter: False
   cover: False
+chancethecoder:
+  username: chancethecoder
+  name: YoungKyun Kim
+  location: Seoul, Korea
+  url_full: http://github/chancethecoder/
+  url: github/chancethecoder
+  bio: 소소한 삶에 만족하는 개발자입니다.
+  picture: assets/images/chancethecoder.jpg
+  facebook: chancethecoder
+  twitter: chancethecoder
+  cover: False
