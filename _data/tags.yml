@@ -14,7 +14,11 @@ getting-started:
   name: getting-started
   description: False
   cover: False
-TIL:
-  name: TIL
+til:
+  name: til
   description: Today I Learned. 개발하면서 배운 지식들을 조금씩 정리한 문서입니다.
+  cover: False
+life:
+  name: life
+  description: My daily life.
   cover: False
