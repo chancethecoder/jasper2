@@ -1,0 +1,61 @@
+---
+layout: post
+current: post
+cover: False
+navigation: True
+title: ECMAScript
+date: 2017-12-27 11:00:00
+tags: [til, javascript]
+class: post-template
+subclass: 'post tag-til tag-javascript'
+author: chancethecoder
+---
+
+<blockquote>
+    <p>
+        A: 너 이거 어떻게 개발했어? <br />
+        B: xxx 프레임워크 썼어. <br />
+        A: ES 몇인데? <br />
+        B: ES5. babel 귀찮아. <br />
+        A: 적어도 Promise는 써야지.. 2017년인데. polyfill이라도 넣자<br />
+    </p>
+</blockquote>
+
+<p>Ecma 인터내셔널은 국제 정보통신 시스템 표준화를 담당하는 조직이며, 다양한 표준을 다루고 있다.</p>
+<p>그 중 하나가 <em>ECMA-262</em>이며, 이를 ECMAScript(이하 ES)라고 부른다.</p>
+
+<h2>ECMAScript와 JavaScript</h2>
+
+<p>ES는 자바스크립트(이하 JS)의 명세 판이다.</p>
+<p>즉, JS가 지원해야 할 기능들의 요구사항일 뿐이다.</p>
+<p>개발자는 ES 명세를 보고 개발하는 것이 아니라, 본인이 구현하고자 하는 환경에서 지원하는 JS 문서를 따라야 한다.</p>
+<p>그럼 환경은? 일반적으로 <strong>브라우저</strong>를 말한다.</p>
+<p>크롬, 익스플로러, 파이어폭스, 사파리 등 웹 브라우저는 JS를 해석하는 엔진을 기본적으로 탑재한다.</p>
+<p>엔진은 JS 코드를 인터프리트 혹은 JIT(Just In Time) 컴파일하는데, 여기서 특정 ES 명세를 준수하도록 만들어지며 <strong>항상 최신 ES 명세를 따른다는 보장은 없다.</strong></p>
+<p>결국 서비스 개발에서 고려할 것은 두 가지</p>
+<ol>
+    <li>지원할 브라우저 종류</li>
+    <li>해당 브라우저에서 지원하는 ES 스펙</li>
+</ol>
+
+<h2>Polyfill? Transpile?</h2>
+
+<p>이제 개발자 입장으로 생각해보자.</p>
+<p>우리는 ES 스펙과는 별개로, 현재 릴리즈 되어 있는 브라우저에 종속될 수 밖에 없다.</p>
+<p>그렇다면 브라우저가 이를 반영하고 모든 사용자가 업데이트할 때까지 기다릴 수 밖에 없을까?</p>
+<p>아니다. 모던 웹에서는 이런 문제점을 해결하기 위한 다양한 방법이 존재한다.</p>
+<p>대표적으로 다음과 같다.</p>
+<ul>
+    <li>polyfill</li>
+    <li>transpile</li>
+</ul>
+<p>둘 다 미지원 기능을 사용하려는 목표는 같다. 하지만 분명한 차이점이 존재한다.</p>
+<p><strong>polyfill</strong>은 미지원 API를 모방한다.</p>
+<p>API 동작을 낡은 브라우저가 해석 가능한 코드로 재현하여 제공하는 것이다.</p>
+<p>하지만, 새로운 <strong>Syntex</strong>를 기존 Syntex로 재현하는 것은 불가능할 수 있다.</p>
+<p>이 때는 <strong>transpile</strong>을 해야 한다.</p>
+<p>transpile은 컴파일을 거쳐 현재 코드를 낡은 브라우저가 해석 가능한 코드로 변형하는 방법이다.</p>
+<p>코드를 작성해놓고, 실행하기 전에 하위 스펙으로 컴파일 된 녀석을 사용한다고 보면 된다.(기능은 유지되게)</p>
+<p>transpile 도구로 가장 유명한 <em>babel</em>은 사실상 웹 표준처럼 쓰이고 있으며,</p>
+<p>플러그인을 조합해 개발 효율, 성능 향상 등을 가져올 수 있다.</p>
+<p>심지어 ES 표준에 명시되지 않은 실험적인 기능도 플러그인만 제공된다면 사용 가능하다.</p>

@@ -4,15 +4,18 @@ current: post
 cover: False
 navigation: True
 title: Hoisting
-date: 2017-12-25 11:00:00
+date: 2017-12-26 11:00:00
 tags: [til, javascript]
 class: post-template
 subclass: 'post tag-til tag-javascript'
 author: chancethecoder
 ---
 
-<h2>Example</h2>
-<p>JS를 하다보면 hoisting이라는 단어를 볼 때가 있다. hoisting은 과연 무엇일까?</p>
+<blockquote>
+    <p>hoisting을 이해하기 전에 scope에 대해 공부하는 것을 추천한다.</p>
+</blockquote>
+
+<p>JS를 하다보면 hoisting이라는 단어를 볼 때가 있다. hoisting은 무엇인가?</p>
 <p>YDKJS의 예제를 살펴보자.</p>
 
 <pre><code class="nohighlight">a = 2;
@@ -31,7 +34,7 @@ var a = 2;
 
 <h2>Compiling</h2>
 <p>JS 엔진은 코드를 인터프리팅하기 전에 컴파일 과정을 거친다.</p>
-<p>예를 들어, <code>var a = 2;</code>라는 코드가 있으면</p>
+<p>예를 들어 <code>var a = 2</code>라는 코드가 있으면</p>
 <ol>
     <li>
         <code>var a</code>와 <code>a = 2</code>로 쪼갠다
