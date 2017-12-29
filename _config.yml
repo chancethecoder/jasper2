@@ -10,7 +10,7 @@ baseurl: /
 # Website info
 title: Chancethecoder
 description: Don't waste time, tldr.
-cover: assets/images/blog-cover.jpg
+cover: False
 logo: assets/images/blog-icon.png
 logo_dark: assets/images/favicon.png
 favicon: assets/images/favicon.png

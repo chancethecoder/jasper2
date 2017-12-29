@@ -1,12 +1,12 @@
 javascript:
   name: javascript
   description: JS에 관련된 내용을 정리합니다.
-  cover: False
+  cover: assets/images/javascript-cover.jpg
 til:
   name: til
   description: Today I Learned. 개발하면서 배운 지식들을 조금씩 정리한 문서입니다.
-  cover: False
+  cover: assets/images/til-cover.jpg
 life:
   name: life
-  description: My daily life.
+  description: 일상
   cover: False
